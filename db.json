@@ -1,0 +1,59 @@
+{
+  "Escuelas": [
+    {
+      "id": 1,
+      "name": "LIM Preescolar",
+      "clave": "lim1234"
+    },
+    {
+      "id": 2,
+      "name": "Preparatoria Costa Azul",
+      "clave": "PCA12345"
+    }
+  ],
+  "Usuarios": [
+    {
+      "id": 1,
+      "name": "Administrador",
+      "clave": "administrador"
+    },
+    {
+      "id": 2,
+      "name": "Alexis Eduardo Vazquez Torres",
+      "clave": "bankito"
+    }
+  ],
+  "login": [
+    {
+      "id": "c8fe"
+    },
+    {
+      "id": "87da"
+    },
+    {
+      "id": "c9e1"
+    }
+  ],
+  "Alumnos": [
+    {
+      "id": "1",
+      "nombre": "Eduardo",
+      "apellidos": "Vazquez Torres",
+      "edad":"24",
+      "matricula": "VATA0006",
+      "grado": "3",
+      "grupo": "A",
+      "nivel": "Prepa"
+    },
+    {
+      "id": "1",
+      "nombre": "David",
+      "apellidos": "Vazquez Torres",
+      "edad":"20",
+      "matricula": "VATD0406",
+      "grado": "3",
+      "grupo": "A",
+      "nivel": "Prepa"
+    }
+  ]
+}
