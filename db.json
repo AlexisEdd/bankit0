@@ -1,24 +1,24 @@
 {
   "Escuelas": [
     {
-      "id": 1,
+      "id": "1",
       "name": "LIM Preescolar",
       "clave": "lim1234"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Preparatoria Costa Azul",
       "clave": "PCA12345"
     }
   ],
   "Usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Administrador",
       "clave": "administrador"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Alexis Eduardo Vazquez Torres",
       "clave": "bankito"
     }
@@ -32,6 +32,111 @@
     },
     {
       "id": "c9e1"
+    },
+    {
+      "id": "1ada",
+      "user": "ad",
+      "password": ""
+    },
+    {
+      "id": "2c88",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "c581",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "cc24",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "e7d7",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "16e0",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "00e4",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "68fb",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "6fe8",
+      "user": "",
+      "password": ""
+    },
+    {
+      "id": "65f0",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "8471",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "f570",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "070e",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "addd",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "807c",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "833d",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "2a13",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "e358",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "e039",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "f205",
+      "user": "Administrador",
+      "password": "administrador"
+    },
+    {
+      "id": "b26e",
+      "user": "Administrador",
+      "password": "administrador"
     }
   ],
   "Alumnos": [
@@ -39,7 +144,7 @@
       "id": "1",
       "nombre": "Eduardo",
       "apellidos": "Vazquez Torres",
-      "edad":"24",
+      "edad": "24",
       "matricula": "VATA0006",
       "grado": "3",
       "grupo": "A",
@@ -49,7 +154,7 @@
       "id": "1",
       "nombre": "David",
       "apellidos": "Vazquez Torres",
-      "edad":"20",
+      "edad": "20",
       "matricula": "VATD0406",
       "grado": "3",
       "grupo": "A",
