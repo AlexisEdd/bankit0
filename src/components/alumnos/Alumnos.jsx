@@ -18,6 +18,8 @@ export const Alumnos = () => {
         };
     };
 
+    // Registrar alumnos
+
     useEffect(() => {
         getData();
     }, []);
@@ -59,6 +61,13 @@ export const Alumnos = () => {
                     </tbody>
                 </table>
             </div>
+            {/* Creamos un formulario de reistro de Alumnos */}
+             <div>
+                <form action="">
+                    <label htmlFor=""></label>
+                    <input type="text" />
+                </form>
+             </div>
         </div>
     )
 }
