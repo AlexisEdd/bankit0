@@ -25,133 +25,7 @@
   ],
   "login": [
     {
-      "id": "c8fe"
-    },
-    {
-      "id": "87da"
-    },
-    {
-      "id": "c9e1"
-    },
-    {
-      "id": "1ada",
-      "user": "ad",
-      "password": ""
-    },
-    {
-      "id": "2c88",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "c581",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "cc24",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "e7d7",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "16e0",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "00e4",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "68fb",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "6fe8",
-      "user": "",
-      "password": ""
-    },
-    {
-      "id": "65f0",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "8471",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "f570",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "070e",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "addd",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "807c",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "833d",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "2a13",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "e358",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "e039",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "f205",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "b26e",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "41f4",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "90ca",
-      "user": "Administrador",
-      "password": "administrador"
-    },
-    {
-      "id": "8f9a",
-      "user": "Administrador",
-      "password": "administrador"
+     
     }
   ],
   "Alumnos": [
@@ -161,9 +35,10 @@
       "apellidos": "Vazquez Torres",
       "edad": "24",
       "matricula": "VATA0006",
+      "escuela": "Liceo Preparatoria",
       "grado": "3",
       "grupo": "A",
-      "nivel": "Prepa"
+      "seccion": "Prepa"
     },
     {
       "id": "1",
@@ -171,9 +46,10 @@
       "apellidos": "Vazquez Torres",
       "edad": "20",
       "matricula": "VATD0406",
+      "escuela": "Liceo Marroquin",
       "grado": "3",
       "grupo": "A",
-      "nivel": "Prepa"
+      "seccion": "Secundaria"
     }
   ]
 }

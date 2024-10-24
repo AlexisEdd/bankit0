@@ -20,7 +20,6 @@ export const Escuelas = () => {
     setSeleccion(clave);
     setMostrarEscuela(false);
   }
-  console.log(seleccion)
 
 
   return (

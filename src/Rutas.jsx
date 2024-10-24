@@ -16,9 +16,8 @@ export const Rutas = () => {
   return (
     <Router>
       <Routes>
-        <Route path='' element={<Principal />} />
-        <Route path='login' element={<Login />} />
-        <Route path='admin' element={<Admin />} />y
+        <Route path='/' element={<Login />} />
+        <Route path='admin' element={<Admin />} />
         <Route path='alumnos' element={<Alumnos />} />
         <Route path='escuelas' element={<Escuelas />} />
         <Route path='reportes' element={<Reportes />} />
