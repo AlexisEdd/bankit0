@@ -1,21 +1,31 @@
 {
   "Escuelas": [
     {
-      "id": "1",
-      "name": "LIM Preescolar",
-      "clave": "lim1234"
+      "clave": "LIMPRES",
+      "nombre": "LIM Preescolar",
+      "id": "a08d"
     },
     {
-      "id": "2",
-      "name": "Preparatoria Costa Azul",
-      "clave": "PCA12345"
+      "clave": "LIMPRIMCA",
+      "nombre": "LIM Primaria Costa Azul",
+      "id": "416e"
+    },
+    {
+      "clave": "LIMSECCA",
+      "nombre": "LIM Secundaria Costa Azul",
+      "id": "8d9e"
+    },
+    {
+      "clave": "LIMPREPCA",
+      "nombre": "LIM Preparatoria Costa Azul",
+      "id": "3fe3"
     }
   ],
   "Usuarios": [
     {
       "id": "1",
       "name": "Administrador",
-      "clave": "administrador"
+      "clave": "admin"
     },
     {
       "id": "2",
@@ -25,7 +35,54 @@
   ],
   "login": [
     {
-     
+      "user": "Administrador",
+      "password": "admin",
+      "id": "20f4"
+    },
+    {
+      "id": "05cb",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "feab",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "9d2d",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "091f",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "805f",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "73dd",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "ee99",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "3820",
+      "user": "Administrador",
+      "password": "admin"
+    },
+    {
+      "id": "7d95",
+      "user": "Administrador",
+      "password": "admin"
     }
   ],
   "Alumnos": [
@@ -33,7 +90,6 @@
       "id": "1",
       "nombre": "Eduardo",
       "apellidos": "Vazquez Torres",
-      "edad": "24",
       "matricula": "VATA0006",
       "escuela": "Liceo Preparatoria",
       "grado": "3",
@@ -44,12 +100,97 @@
       "id": "1",
       "nombre": "David",
       "apellidos": "Vazquez Torres",
-      "edad": "20",
       "matricula": "VATD0406",
       "escuela": "Liceo Marroquin",
       "grado": "3",
       "grupo": "A",
       "seccion": "Secundaria"
+    },
+    {
+      "id": "a4df",
+      "nombre": "Yomara Alexandra",
+      "apellidos": "Nuñez",
+      "matricula": "202425",
+      "escuela": "LIMPREPCA",
+      "seccion": "preparatoria",
+      "grado": "3",
+      "grupo": "A"
+    },
+    {
+      "id": "f3de",
+      "nombre": "Yomara Alexandra",
+      "apellidos": "Nuñez",
+      "matricula": "202425",
+      "escuela": "LIMPREPCA",
+      "seccion": "Preparatoria",
+      "grado": "3",
+      "grupo": "A"
+    },
+    {
+      "id": "74ee",
+      "nombre": "Andre",
+      "apellidos": "Hernandez",
+      "matricula": "202401",
+      "escuela": "LIMPRES",
+      "seccion": "Maternal",
+      "grado": "1",
+      "grupo": "A"
+    },
+    {
+      "id": "b35f",
+      "nombre": "Yareli",
+      "apellidos": "Galindo",
+      "matricula": "212120",
+      "escuela": "LIMPREPCA",
+      "seccion": "Preparatoria",
+      "grado": "3",
+      "grupo": "A"
+    },
+    {
+      "id": "f1bf",
+      "nombre": "Don",
+      "apellidos": "Chino",
+      "matricula": "123123",
+      "escuela": "LIMPREPCA",
+      "seccion": "Preparatoria",
+      "grado": "3",
+      "grupo": "B"
+    },
+    {
+      "id": "cb12",
+      "nombre": "Simone",
+      "apellidos": "Vazquez Ortega",
+      "matricula": "202403",
+      "escuela": "LIMPRES",
+      "seccion": "Preescolar",
+      "grado": "3",
+      "grupo": "B"
+    },
+    {
+      "id": "AAVA2906",
+      "nombre": "Alisson Alexia",
+      "apellidos": "Vazquez",
+      "matricula": "AAVA2906",
+      "escuela": "LIMPRES",
+      "seccion": "Maternal",
+      "grado": "1",
+      "grupo": "A"
+    }
+  ],
+  "Ahorros": [
+    {
+      "id": "1",
+      "id_alumno": "VATA0006",
+      "id_escuela": "LIMPRES",
+      "monto": 100,
+      "fecha": "2024-12-03"
+    },
+    {
+      "id": "2",
+      "id_alumno": "VATD0406",
+      "id_escuela": "LIMPRIMCA",
+      "monto": 200,
+      "fecha": "2024-12-04"
     }
   ]
 }

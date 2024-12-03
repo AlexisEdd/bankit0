@@ -4,19 +4,19 @@ import axios from 'axios';
 
 export const Alumnos = () => {
     const [alumnos, setAlumnos] = useState([]);
+    const [escuelas, setEscuelas] = useState([]);
     const [registro, setRegistro] = useState(false);
     const [datosForm, setDatosForm] = useState({
         nombre: "",
         apellidos: "",
-        edad: "",
         matricula: "",
         escuela: "",
-        nivel: "",
+        seccion: "",
         grado: ""
     });
 
     // Traer datos de los alumnos
-    const getData = async (e) => {
+    const getData = async () => {
         try {
             const response = await axios.get('http://localhost:3000/Alumnos')
             setAlumnos(response.data);
@@ -24,20 +24,51 @@ export const Alumnos = () => {
             console.error(error);
         };
     };
+    // Traer datos de las Escuelas
+    const getSchool = async () => {
+        try {
+            const response = await axios.get('http://localhost:3000/Escuelas')
+            setEscuelas(response.data);
+        } catch (error) {
+            console.error(error);
+        };
+    };
 
+    const getNameSchool = (claveEscuela) => {
+        const escuela = escuelas.find((school) => school.clave === claveEscuela);
+        return escuela ? escuela.nombre : 'No se encontró la escuela';
+    };
+    
     // Registrar datos del alumno
-    const handleForm = () => {
-        const {name, value} = e.target;
+    const handleForm = (e) => {
+        const { name, value } = e.target;
         setDatosForm({
             ...datosForm,
             [name]: value
         })
-    }
-    
+    };
+
+    // enviar datos a bd
+    const guardarAlumno = async () => {
+
+        try {
+            const idAlumno = {...datosForm, id: datosForm.matricula};
+
+            const response = await axios.post('http://localhost:3000/Alumnos', idAlumno);
+            alert('Alumno registrado con exito');
+        } catch (error) {
+            console.error(error);
+            alert('error bro');
+        }
+    };
+
+    console.log(datosForm);
+
     // Registrar alumnos
 
     useEffect(() => {
         getData();
+        getSchool();
     }, []);
     console.log(alumnos);
 
@@ -59,7 +90,6 @@ export const Alumnos = () => {
                         <tr className=' bg-slate-500 text-white border-b'>
                             <th className='p-3 text-left'>Nombre</th>
                             <th className='p-3 text-left'>Apellidos</th>
-                            <th className='p-3 text-left'>Edad</th>
                             <th className='p-3 text-left'>Matricula</th>
                             <th className='p-3 text-left'>Escuela</th>
                             <th className='p-3 text-left'>Nivel</th>
@@ -72,9 +102,8 @@ export const Alumnos = () => {
                             <tr key={id} className='border-b'>
                                 <td className='p-3'>{dato.nombre}</td>
                                 <td>{dato.apellidos}</td>
-                                <td>{dato.edad}</td>
                                 <td>{dato.matricula}</td>
-                                <td>{dato.escuela}</td>
+                                <td>{getNameSchool(dato.escuela)}</td>
                                 <td>{dato.seccion}</td>
                                 <td>{dato.grado}</td>
                                 <td>{dato.grupo}</td>
@@ -88,20 +117,24 @@ export const Alumnos = () => {
                 <div onClick={() => setRegistro(false)} className='fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 overflow-y-auto'>
                     <div onClick={(e) => e.stopPropagation()} className='w-full max-w-md mx-auto border mt-5 p-4 rounded-md shadow-md bg-white'>
                         <h1 className=' font-bold text-2xl'>Registrar Alumno</h1>
-                        <form className=' my-8 space-y-4' action="">
+                        <form onSubmit={() => guardarAlumno()} className=' my-8 space-y-4' action="">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className='space-y-2'>
                                     <label className='block text-sm font-medium text-gray-700' htmlFor="">Nombre</label>
-                                    <input className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text" />
+                                    <input onChange={handleForm} name='nombre' className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text" />
                                 </div>
                                 <div className='space-y-2'>
                                     <label className='block text-sm font-medium text-gray-700' htmlFor="">Apellidos</label>
-                                    <input className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text" />
+                                    <input onChange={handleForm} name='apellidos' className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text" />
+                                </div>
+                                <div className='space-y-2'>
+                                    <label className='block text-sm font-medium text-gray-700' htmlFor="">Matricula</label>
+                                    <input onChange={handleForm} name='matricula' className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text" />
                                 </div>
                             </div>
                             <div className='space-y-2 space-x-1'>
                                 <label htmlFor="">Grado</label>
-                                <input name='grado' onChange={handleForm} className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text"/>
+                                <input name='grado' onChange={handleForm} className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' type="text" />
                             </div>
                             <div className='space-y-2 space-x-1'>
                                 <label htmlFor="">Grupo</label>
@@ -109,7 +142,7 @@ export const Alumnos = () => {
                             </div>
                             <div className='space-y-2 space-x-1'>
                                 <label htmlFor="">Escuela</label>
-                                <select name="escuela" className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' name="" id="">
+                                <select onChange={handleForm} name="escuela" className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' id="">
                                     <option value="">Selecciona una opcion</option>
                                     <option value="LIMPRES">Liceo Costa Azul Preescolar</option>
                                     <option value="LIMPRIMCA">Liceo Costa Azul Primaria</option>
@@ -119,14 +152,13 @@ export const Alumnos = () => {
                             </div>
                             <div className='space-y-2 space-x-1'>
                                 <label htmlFor="">Seccion</label>
-                                <select className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300' name="" id="">
+                                <select name='seccion' onChange={handleForm} className='w-full px-3 py-2 border border-gray-300 rounded-sm shadow-sm focus:outline-none focus:ring focus:border-blue-300'>
                                     <option value="">Selecciona una opcion</option>
-                                    <option value="maternal">Maternal</option>
-                                    <option value="preescolar">Preescolar</option>
-                                    <option value="primaria">Primaria</option>
-                                    <option value="secundaria">Secundaria</option>
-                                    <option value="preparatoria">Preparatoria</option>
-                                    <option value="LIMPRES">Maternal</option>
+                                    <option value="Maternal">Maternal</option>
+                                    <option value="Preescolar">Preescolar</option>
+                                    <option value="Primaria">Primaria</option>
+                                    <option value="Secundaria">Secundaria</option>
+                                    <option value="Preparatoria">Preparatoria</option>
                                 </select>
                             </div>
                             <div className='flex mx-auto justify-center space-x-4'>

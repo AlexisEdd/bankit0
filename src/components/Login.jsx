@@ -13,7 +13,7 @@ export const Login = () => {
   // Obtener datos del bakcend 
   const getCredenciales = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/login');
+      const response = await axios.get('http://localhost:3000/Usuarios');
       setCredenciales(response.data);
     } catch (error) {
       console.error(error);
@@ -31,7 +31,7 @@ export const Login = () => {
     e.preventDefault();
     try {
       const usuario = credenciales.find(
-        (credencial) => credencial.user === user && credencial.password === password);
+        (credencial) => credencial.name === user && credencial.clave === password);
 
       if (usuario) {
         const response = await axios.post('http://localhost:3000/login', { user, password });
