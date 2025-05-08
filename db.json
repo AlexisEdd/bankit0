@@ -38,51 +38,7 @@
       "user": "Administrador",
       "password": "admin",
       "id": "20f4"
-    },
-    {
-      "id": "05cb",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "feab",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "9d2d",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "091f",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "805f",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "73dd",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "ee99",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "3820",
-      "user": "Administrador",
-      "password": "admin"
-    },
-    {
-      "id": "7d95",
-      "user": "Administrador",
-      "password": "admin"
+  
     }
   ],
   "Alumnos": [
@@ -167,12 +123,22 @@
       "grupo": "B"
     },
     {
-      "id": "AAVA2906",
+      "id": "202408",
       "nombre": "Alisson Alexia",
       "apellidos": "Vazquez",
-      "matricula": "AAVA2906",
+      "matricula": "202408",
       "escuela": "LIMPRES",
       "seccion": "Maternal",
+      "grado": "1",
+      "grupo": "A"
+    },
+    {
+      "id": "042000",
+      "nombre": "Fatima",
+      "apellidos": "Michelle",
+      "matricula": "042000",
+      "escuela": "LIMPRES",
+      "seccion": "Preescolar",
       "grado": "1",
       "grupo": "A"
     }
